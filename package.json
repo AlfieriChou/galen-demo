@@ -1,0 +1,12 @@
+{
+  "name": "galen-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AlfieriChou/galen-demo",
+  "author": "AlfieriChou <alfierichou@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@galenjs/core": "^0.1.7",
+    "@galenjs/sequelize-models": "^0.1.6"
+  }
+}
