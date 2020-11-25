@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@galenjs/core": "^0.1.7",
-    "@galenjs/sequelize-models": "^0.1.6"
+    "@galenjs/sequelize-models": "^0.1.6",
+    "mysql2": "^2.2.5"
   }
 }
