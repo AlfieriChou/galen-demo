@@ -1,5 +1,6 @@
 const loadModels = require('@galenjs/core')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
+const buildSwaggerDocs = require('@galenjs/swagger')
 const path = require('path')
 
 const mysql = {
@@ -16,7 +17,13 @@ const bootstrap = async () => {
   console.log('----modelSchemas----', JSON.stringify(modelSchemas, null, 2))
   console.log('----schemas----', JSON.stringify(schemas, null, 2))
   const db = await loadSequelizeModels(modelSchemas, { mysql })
-  console.log(await db.User.findOne({ where: { phone: '13222221111' }}))
+  console.log('-------user--------', await db.User.findOne({ where: { phone: '13222221111' }}))
+  const openApi = await buildSwaggerDocs({
+    title: "galen API document",
+    version: "v3",
+    description: "Galen document"
+  }, { schemas, remoteMethods })
+  console.log('-------openApi-------', openApi)
 }
 
 bootstrap()
