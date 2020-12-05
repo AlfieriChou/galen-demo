@@ -23,4 +23,8 @@ model:
     allowNull: false
   deletedAt:
     type: date
-    allowNull: false
+relations:
+  roles:
+    type: 'belongsToMany'
+    model: 'Role'
+    through: 'UserRole'

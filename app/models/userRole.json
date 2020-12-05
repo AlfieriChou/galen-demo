@@ -1,4 +1,17 @@
 {
+  "model": {
+    "createdAt": {
+      "type": "date",
+      "allowNull": false
+    },
+    "updatedAt": {
+      "type": "date",
+      "allowNull": false
+    },
+    "deletedAt": {
+      "type": "date"
+    }
+  },
   "relations": {
     "user": {
       "type": "belongsTo",

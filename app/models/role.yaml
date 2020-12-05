@@ -19,4 +19,3 @@ model:
     allowNull: false
   deletedAt:
     type: date
-    allowNull: false

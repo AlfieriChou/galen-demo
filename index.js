@@ -17,11 +17,15 @@ const bootstrap = async () => {
   console.log('----modelSchemas----', JSON.stringify(modelSchemas, null, 2))
   console.log('----schemas----', JSON.stringify(schemas, null, 2))
   const db = await loadSequelizeModels(modelSchemas, { mysql })
-  console.log('-------user--------', await db.User.findOne({ where: { phone: '13222221111' }}))
+  const data = await db.User.findOne({
+    where: { phone: '13222221111' },
+    include: ['roles']
+  })
+  console.log('-------user--------', JSON.stringify(data.toJSON(), null, 2))
   const openApi = await buildSwaggerDocs({
-    title: "galen API document",
-    version: "v3",
-    description: "Galen document"
+    title: 'galen API document',
+    version: 'v3',
+    description: 'Galen document'
   }, { schemas, remoteMethods })
   console.log('-------openApi-------', openApi)
 }
