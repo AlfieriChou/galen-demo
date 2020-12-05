@@ -1,0 +1,22 @@
+model:
+  id:
+    type: integer
+    autoIncrement: true
+    primaryKey: true
+  code:
+    type: string
+    length: 32
+    description: '编码'
+  name:
+    type: string
+    length: 32
+    description: '名称'
+  createdAt:
+    type: date
+    allowNull: false
+  updatedAt:
+    type: date
+    allowNull: false
+  deletedAt:
+    type: date
+    allowNull: false

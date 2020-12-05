@@ -1,0 +1,12 @@
+{
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User"
+    },
+    "role": {
+      "type": "belongsTo",
+      "model": "Role"
+    }
+  }
+}
