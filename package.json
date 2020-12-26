@@ -18,8 +18,9 @@
     }
   },
   "dependencies": {
+    "@galenjs/base": "^0.2.6",
     "@galenjs/core": "^0.1.12",
-    "@galenjs/sequelize-models": "^0.1.12",
+    "@galenjs/sequelize-models": "^0.2.0",
     "@galenjs/swagger": "^0.1.4",
     "mysql2": "^2.2.5"
   },

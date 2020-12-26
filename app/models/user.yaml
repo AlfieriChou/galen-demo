@@ -28,3 +28,9 @@ relations:
     type: 'belongsToMany'
     model: 'Role'
     through: 'UserRole'
+indexes:
+  testIndex:
+    type: 'index'
+    fields:
+      - phone
+      - nickName

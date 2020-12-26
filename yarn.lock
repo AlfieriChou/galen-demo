@@ -260,6 +260,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@galenjs/base@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.npm.taobao.org/@galenjs/base/download/@galenjs/base-0.2.6.tgz#5c2ef5feea3848e6ff8d8006138021d43fbb38d4"
+  integrity sha1-XC71/uo4SOb/jYAGE4Ah1D+7ONQ=
+  dependencies:
+    js-yaml "^3.14.0"
+    jsonschema "^1.4.0"
+    lodash "^4.17.20"
+    read-dir-filenames "^1.0.5"
+
 "@galenjs/core@^0.1.12":
   version "0.1.12"
   resolved "https://registry.npm.taobao.org/@galenjs/core/download/@galenjs/core-0.1.12.tgz#7b1d67f2fa6f5e8faca4d251addda7e903174cb9"
@@ -270,10 +280,10 @@
     lodash "^4.17.20"
     read-dir-filenames "^1.0.5"
 
-"@galenjs/sequelize-models@^0.1.12":
-  version "0.1.12"
-  resolved "https://registry.npm.taobao.org/@galenjs/sequelize-models/download/@galenjs/sequelize-models-0.1.12.tgz#30c0844aa19a3d65ee307c6521006dce60c10e81"
-  integrity sha1-MMCESqGaPWXuMHxlIQBtzmDBDoE=
+"@galenjs/sequelize-models@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npm.taobao.org/@galenjs/sequelize-models/download/@galenjs/sequelize-models-0.2.0.tgz#a82bc23590f205d9699a947b7f73af5043b84b7a"
+  integrity sha1-qCvCNZDyBdlpmpR7f3OvUEO4S3o=
   dependencies:
     jsonschema "^1.4.0"
     lodash "^4.17.20"
