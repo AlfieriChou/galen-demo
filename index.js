@@ -1,18 +1,26 @@
 const loadModels = require('@galenjs/base')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
+const createInfluxClient = require('@galenjs/influx')
 const buildSwaggerDocs = require('@galenjs/swagger')
 
-const mysql = {
-  default: {
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'alfieri',
-    database: 'test'
+const config = {
+  mysql: {
+    default: {
+      host: '127.0.0.1',
+      user: 'root',
+      password: 'alfieri',
+      database: 'test'
+    },
+    clients: {
+      main: {}
+    }
   },
-  clients: {
-    main: {}
+  influx: {
+    host: '127.0.0.1',
+    database: 'test'
   }
 }
+
 const bootstrap = async () => {
   const { remoteMethods, modelSchemas, schemas } = await loadModels({
     workspace: process.cwd(),
@@ -21,7 +29,7 @@ const bootstrap = async () => {
   console.log('----remoteMethods----', JSON.stringify(remoteMethods, null, 2))
   console.log('----modelSchemas----', JSON.stringify(modelSchemas, null, 2))
   console.log('----schemas----', JSON.stringify(schemas, null, 2))
-  const db = await loadSequelizeModels(modelSchemas, mysql)
+  const db = await loadSequelizeModels(modelSchemas, config.mysql)
   const data = await db.User.findOne({
     where: { phone: '13222221111' },
     include: ['roles']
@@ -33,6 +41,8 @@ const bootstrap = async () => {
     description: 'Galen document'
   }, { schemas, remoteMethods })
   console.log('-------openApi-------', openApi)
+  const influx = await createInfluxClient(modelSchemas, config.influx)
+  console.log('-------influx-------', influx)
 }
 
 bootstrap()
