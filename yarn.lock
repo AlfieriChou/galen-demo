@@ -260,46 +260,36 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@galenjs/base@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.npm.taobao.org/@galenjs/base/download/@galenjs/base-0.2.6.tgz#5c2ef5feea3848e6ff8d8006138021d43fbb38d4"
-  integrity sha1-XC71/uo4SOb/jYAGE4Ah1D+7ONQ=
+"@galenjs/base@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npm.taobao.org/@galenjs/base/download/@galenjs/base-0.3.2.tgz?cache=0&sync_timestamp=1609395613488&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40galenjs%2Fbase%2Fdownload%2F%40galenjs%2Fbase-0.3.2.tgz#ec281bb1c45d6a3cefb9603c464118769ffe5e9b"
+  integrity sha1-7CgbscRdajzvuWA8RkEYdp/+Xps=
   dependencies:
     js-yaml "^3.14.0"
     jsonschema "^1.4.0"
     lodash "^4.17.20"
-    read-dir-filenames "^1.0.5"
+    read-dir-filenames "^1.0.6"
 
-"@galenjs/core@^0.1.12":
-  version "0.1.12"
-  resolved "https://registry.npm.taobao.org/@galenjs/core/download/@galenjs/core-0.1.12.tgz#7b1d67f2fa6f5e8faca4d251addda7e903174cb9"
-  integrity sha1-ex1n8vpvXo+spNJRrd2n6QMXTLk=
-  dependencies:
-    js-yaml "^3.14.0"
-    jsonschema "^1.4.0"
-    lodash "^4.17.20"
-    read-dir-filenames "^1.0.5"
-
-"@galenjs/influx@^0.2.9":
-  version "0.2.9"
-  resolved "https://registry.npm.taobao.org/@galenjs/influx/download/@galenjs/influx-0.2.9.tgz#383c2cec971c5579c5df30a8be21296483b771a5"
-  integrity sha1-ODws7JccVXnF3zCoviEpZIO3caU=
+"@galenjs/influx@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/@galenjs/influx/download/@galenjs/influx-0.3.0.tgz#fe5a0357e1439b2c5c99b71ca35bd034c94ef1e2"
+  integrity sha1-/loDV+FDmyxcmbcco1vQNMlO8eI=
   dependencies:
     influx "^5.6.3"
 
-"@galenjs/sequelize-models@^0.2.7":
-  version "0.2.7"
-  resolved "https://registry.npm.taobao.org/@galenjs/sequelize-models/download/@galenjs/sequelize-models-0.2.7.tgz#d8f904f813f5099a28edbd35c2db580cc3067fe3"
-  integrity sha1-2PkE+BP1CZoo7b01wttYDMMGf+M=
+"@galenjs/sequelize-models@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npm.taobao.org/@galenjs/sequelize-models/download/@galenjs/sequelize-models-0.3.2.tgz?cache=0&sync_timestamp=1609395623703&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40galenjs%2Fsequelize-models%2Fdownload%2F%40galenjs%2Fsequelize-models-0.3.2.tgz#5335353cbf218fc72c6655e23671789615de011e"
+  integrity sha1-UzU1PL8hj8csZlXiNnF4lhXeAR4=
   dependencies:
     jsonschema "^1.4.0"
     lodash "^4.17.20"
     sequelize "^6.3.5"
 
-"@galenjs/swagger@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.npm.taobao.org/@galenjs/swagger/download/@galenjs/swagger-0.1.4.tgz#a8b3761606e4a788ab730ffd8de50d48ab88b73c"
-  integrity sha1-qLN2Fgbkp4ircw/9jeUNSKuItzw=
+"@galenjs/swagger@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npm.taobao.org/@galenjs/swagger/download/@galenjs/swagger-0.3.2.tgz?cache=0&sync_timestamp=1609395615378&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40galenjs%2Fswagger%2Fdownload%2F%40galenjs%2Fswagger-0.3.2.tgz#386dfb313a58add24cb7a2519014d44cfbc0743b"
+  integrity sha1-OG37MTpYrdJMt6JRkBTUTPvAdDs=
   dependencies:
     lodash "^4.17.20"
 
@@ -3456,10 +3446,10 @@ react-is@^16.8.1:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1603369407179&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
-read-dir-filenames@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npm.taobao.org/read-dir-filenames/download/read-dir-filenames-1.0.5.tgz#6f44f7c8fa811931dfe9780ad67f6f394fc8216f"
-  integrity sha1-b0T3yPqBGTHf6XgK1n9vOU/IIW8=
+read-dir-filenames@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npm.taobao.org/read-dir-filenames/download/read-dir-filenames-1.0.6.tgz#a02546256ae4691940ac4ae39555b3148f8f3598"
+  integrity sha1-oCVGJWrkaRlArErjlVWzFI+PNZg=
 
 read-pkg-up@^1.0.1:
   version "1.0.1"

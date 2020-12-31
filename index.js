@@ -42,7 +42,13 @@ const bootstrap = async () => {
   }, { schemas, remoteMethods })
   console.log('-------openApi-------', openApi)
   const influx = await createInfluxClient(modelSchemas, config.influx)
-  console.log('-------influx-------', influx)
+  const influxData = await influx.query(`
+    select * from response_time
+    where host = '127.0.0.1'
+    order by time desc
+    limit 10
+  `)
+  console.log('-------influx-------', influxData)
 }
 
 bootstrap()
