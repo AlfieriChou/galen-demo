@@ -20,6 +20,7 @@
   "dependencies": {
     "@galenjs/base": "^0.3.2",
     "@galenjs/influx": "^0.3.0",
+    "@galenjs/redis": "^0.3.2",
     "@galenjs/sequelize-models": "^0.3.2",
     "@galenjs/swagger": "^0.3.2",
     "mysql2": "^2.2.5"

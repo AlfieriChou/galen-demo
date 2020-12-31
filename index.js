@@ -2,6 +2,7 @@ const loadModels = require('@galenjs/base')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
 const createInfluxClient = require('@galenjs/influx')
 const buildSwaggerDocs = require('@galenjs/swagger')
+const createRedisClient = require('@galenjs/redis')
 
 const config = {
   mysql: {
@@ -18,6 +19,19 @@ const config = {
   influx: {
     host: '127.0.0.1',
     database: 'test'
+  },
+  redis: {
+    default: {
+      host: '127.0.0.1',
+      port: 6379,
+      password: '',
+      db: 2
+    },
+    clients: {
+      main: {
+        keyPrefix: 'main'
+      }
+    }
   }
 }
 
@@ -49,6 +63,10 @@ const bootstrap = async () => {
     limit 10
   `)
   console.log('-------influx-------', influxData)
+  const redis = await createRedisClient(config.redis)
+  await redis.set('main', 'test', 'value', 3 * 60)
+  const redisData = await redis.get('main', 'test')
+  console.log('-------redis-------', redisData)
 }
 
 bootstrap()

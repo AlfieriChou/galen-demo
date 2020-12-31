@@ -270,12 +270,26 @@
     lodash "^4.17.20"
     read-dir-filenames "^1.0.6"
 
+"@galenjs/func@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/@galenjs/func/download/@galenjs/func-0.3.0.tgz#7b5844d10d7424ccbc5a5a97bbaa0804d2ab118a"
+  integrity sha1-e1hE0Q10JMy8WlqXu6oIBNKrEYo=
+
 "@galenjs/influx@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/@galenjs/influx/download/@galenjs/influx-0.3.0.tgz#fe5a0357e1439b2c5c99b71ca35bd034c94ef1e2"
   integrity sha1-/loDV+FDmyxcmbcco1vQNMlO8eI=
   dependencies:
     influx "^5.6.3"
+
+"@galenjs/redis@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npm.taobao.org/@galenjs/redis/download/@galenjs/redis-0.3.2.tgz#fc422428e79bf8780dbf9ce146005c1e96a2ff6d"
+  integrity sha1-/EIkKOeb+HgNv5zhRgBcHpai/20=
+  dependencies:
+    "@galenjs/func" "^0.3.0"
+    ioredis "^4.19.4"
+    jsonschema "^1.4.0"
 
 "@galenjs/sequelize-models@^0.3.2":
   version "0.3.2"
@@ -763,6 +777,11 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+cluster-key-slot@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/cluster-key-slot/download/cluster-key-slot-1.1.0.tgz#30474b2a981fb12172695833052bc0d01336d10d"
+  integrity sha1-MEdLKpgfsSFyaVgzBSvA0BM20Q0=
+
 coalescy@1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/coalescy/download/coalescy-1.0.0.tgz#4b065846b836361ada6c4b4a4abf4bc1cac31bf1"
@@ -1170,7 +1189,7 @@ define-properties@^1.1.3:
   dependencies:
     object-keys "^1.0.12"
 
-denque@^1.4.1:
+denque@^1.1.0, denque@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/denque/download/denque-1.4.1.tgz#6744ff7641c148c3f8a69c307e51235c1f4a37cf"
   integrity sha1-Z0T/dkHBSMP4ppwwflEjXB9KN88=
@@ -2218,6 +2237,22 @@ interpret@^1.0.0:
   resolved "https://registry.npm.taobao.org/interpret/download/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha1-Zlq4vE2iendKQFhOgS4+D6RbGh4=
 
+ioredis@^4.19.4:
+  version "4.19.4"
+  resolved "https://registry.npm.taobao.org/ioredis/download/ioredis-4.19.4.tgz?cache=0&sync_timestamp=1607934609575&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fioredis%2Fdownload%2Fioredis-4.19.4.tgz#11112005f87ad3acac247ada3b22eb31b947f7c7"
+  integrity sha1-EREgBfh606ysJHraOyLrMblH98c=
+  dependencies:
+    cluster-key-slot "^1.1.0"
+    debug "^4.1.1"
+    denque "^1.1.0"
+    lodash.defaults "^4.2.0"
+    lodash.flatten "^4.4.0"
+    p-map "^2.1.0"
+    redis-commands "1.6.0"
+    redis-errors "^1.2.0"
+    redis-parser "^3.0.0"
+    standard-as-callback "^2.0.1"
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npm.taobao.org/is-arrayish/download/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -2624,6 +2659,16 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/lodash._reinterpolate/download/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
+lodash.defaults@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npm.taobao.org/lodash.defaults/download/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
+  integrity sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
+
+lodash.flatten@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npm.taobao.org/lodash.flatten/download/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
+  integrity sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
 
 lodash.ismatch@^4.4.0:
   version "4.4.0"
@@ -3170,6 +3215,11 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
+p-map@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/p-map/download/p-map-2.1.0.tgz#310928feef9c9ecc65b68b17693018a665cea175"
+  integrity sha1-MQko/u+cnsxltosXaTAYpmXOoXU=
+
 p-map@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/p-map/download/p-map-4.0.0.tgz#bb2f95a5eda2ec168ec9274e06a747c3e2904d2b"
@@ -3581,6 +3631,23 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
+redis-commands@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.npm.taobao.org/redis-commands/download/redis-commands-1.6.0.tgz?cache=0&sync_timestamp=1595991401088&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fredis-commands%2Fdownload%2Fredis-commands-1.6.0.tgz#36d4ca42ae9ed29815cdb30ad9f97982eba1ce23"
+  integrity sha1-NtTKQq6e0pgVzbMK2fl5guuhziM=
+
+redis-errors@^1.0.0, redis-errors@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/redis-errors/download/redis-errors-1.2.0.tgz#eb62d2adb15e4eaf4610c04afe1529384250abad"
+  integrity sha1-62LSrbFeTq9GEMBK/hUpOEJQq60=
+
+redis-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/redis-parser/download/redis-parser-3.0.0.tgz#b66d828cdcafe6b4b8a428a7def4c6bcac31c8b4"
+  integrity sha1-tm2CjNyv5rS4pCin3vTGvKwxyLQ=
+  dependencies:
+    redis-errors "^1.0.0"
+
 regenerator-runtime@^0.13.4:
   version "0.13.7"
   resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
@@ -3934,6 +4001,11 @@ sqlstring@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/sqlstring/download/sqlstring-2.3.2.tgz#cdae7169389a1375b18e885f2e60b3e460809514"
   integrity sha1-za5xaTiaE3WxjohfLmCz5GCAlRQ=
+
+standard-as-callback@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/standard-as-callback/download/standard-as-callback-2.0.1.tgz#ed8bb25648e15831759b6023bdb87e6b60b38126"
+  integrity sha1-7YuyVkjhWDF1m2Ajvbh+a2CzgSY=
 
 standard-version@^9.0.0:
   version "9.0.0"
