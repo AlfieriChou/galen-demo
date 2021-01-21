@@ -270,6 +270,14 @@
     lodash "^4.17.20"
     read-dir-filenames "^1.0.6"
 
+"@galenjs/class-loader@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@galenjs/class-loader/-/class-loader-0.4.0.tgz#358e32d7fe52aebb71b4aff04cbf0072abd4e166"
+  integrity sha512-KWDq3hKA8eV7A9Hw4iuiJp1CgTGN9JIkiHRRF/ISXsRpyMxxKTzbo1S+EeauzGO5gSl5agYcmPPpdRIBcO02dQ==
+  dependencies:
+    is-class "^0.0.9"
+    read-dir-filenames "^1.0.6"
+
 "@galenjs/func@^0.4.0":
   version "0.4.0"
   resolved "https://registry.npmjs.org/@galenjs/func/-/func-0.4.0.tgz#3f854266db19c4433deb016a27fbbad84af34583"
@@ -2476,6 +2484,11 @@ is-ci@^2.0.0:
   integrity sha1-a8YzQYGBDgS1wis9WJ/cpVAmQEw=
   dependencies:
     ci-info "^2.0.0"
+
+is-class@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/is-class/-/is-class-0.0.9.tgz#3024c17b1cf8f6bdc1f3eca1bae507ea992b6d93"
+  integrity sha512-kUfRnejcRC9YLgblxoJ76dp9gZ3vMKTrDS5I6z2UVMOsHHSImNKCJocjQTkZr38PwiSZ9LVklaHEENaVYeFTXg==
 
 is-core-module@^2.1.0:
   version "2.2.0"

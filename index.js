@@ -3,6 +3,8 @@ const koaBody = require('koa-body')
 const koaLogger = require('koa-logger')
 const bodyParser = require('koa-bodyparser')
 const os = require('os')
+const path = require('path')
+const fs = require('fs')
 
 const loadModels = require('@galenjs/base')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
@@ -10,6 +12,7 @@ const createInfluxClient = require('@galenjs/influx')
 // const buildSwaggerDocs = require('@galenjs/swagger')
 const createRedisClient = require('@galenjs/redis')
 const buildRouter = require('@galenjs/router')
+const classLoader = require('@galenjs/class-loader')
 
 const config = require('./config')
 
@@ -21,12 +24,18 @@ const bootstrap = async () => {
     workspace: process.cwd(),
     modelPath: 'app/models'
   })
+
   app.context.remoteMethods = remoteMethods
   app.context.modelSchemas = modelSchemas
   app.context.schemas = schemas
   app.context.models = await loadSequelizeModels(modelSchemas, config.mysql)
   app.context.influx = await createInfluxClient(modelSchemas, config.influx)
   app.context.redis = await createRedisClient(config.redis)
+  const controllerPath = path.resolve(__dirname, './app/controller')
+  const servicePath = path.resolve(__dirname, './app/service')
+  app.context.controller = fs.existsSync(controllerPath) ? classLoader(controllerPath) : {}
+  app.context.service = fs.existsSync(servicePath) ? classLoader(servicePath) : {}
+
   const router = await buildRouter({ remoteMethods, modelSchemas })
   app.use(async (ctx, next) => {
     const start = Date.now()
@@ -48,6 +57,8 @@ const bootstrap = async () => {
         fields: { duration, path: ctx.path }
       }])
     } catch (err) {
+      // TODO: logger
+      console.error('error: ', err)
       ctx.status = err.status || 500
       ctx.body = {
         code: ctx.status,

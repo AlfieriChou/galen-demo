@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@galenjs/base": "^0.4.0",
+    "@galenjs/class-loader": "^0.4.0",
     "@galenjs/influx": "^0.4.0",
     "@galenjs/redis": "^0.4.0",
     "@galenjs/router": "^0.4.3",
