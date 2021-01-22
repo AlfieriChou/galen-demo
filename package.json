@@ -25,6 +25,7 @@
     "@galenjs/router": "^0.4.3",
     "@galenjs/sequelize-models": "^0.4.5",
     "@galenjs/swagger": "^0.4.0",
+    "expire-store": "^1.0.2",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
     "koa-bodyparser": "^4.3.0",

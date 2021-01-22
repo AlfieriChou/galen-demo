@@ -9,7 +9,6 @@ const fs = require('fs')
 const loadModels = require('@galenjs/base')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
 const createInfluxClient = require('@galenjs/influx')
-// const buildSwaggerDocs = require('@galenjs/swagger')
 const createRedisClient = require('@galenjs/redis')
 const buildRouter = require('@galenjs/router')
 const classLoader = require('@galenjs/class-loader')
@@ -121,9 +120,3 @@ const bootstrap = async () => {
 }
 
 bootstrap()
-
-// const openApi = await buildSwaggerDocs({
-//   title: 'galen API document',
-//   version: 'v3',
-//   description: 'Galen document'
-// }, { schemas, remoteMethods })
