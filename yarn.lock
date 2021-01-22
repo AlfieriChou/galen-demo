@@ -295,10 +295,10 @@
   dependencies:
     influx "^5.6.3"
 
-"@galenjs/redis@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/@galenjs/redis/-/redis-0.4.0.tgz#eae3a7a7877b0564cc3a8a47abe69d1c7f72fbcf"
-  integrity sha512-+phLAVAj3qqCFatVSp0KQQf8onJIzCYV0Byn34Sa+FxAkSTCYrBhyvBd7bWuOwmg1cLudU7mHvIT44Hsdkd7/A==
+"@galenjs/redis@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.npmjs.org/@galenjs/redis/-/redis-0.4.5.tgz#869c04a65b249243efe7a2259a34940549c44324"
+  integrity sha512-Ir+0o7OAA3LOkoViktvzpGNY4gCa0ral6p9moV2fjhpUlaT5iZdUX5ZAichtlVacZpry+wwwhLZgClma8dOIlQ==
   dependencies:
     "@galenjs/func" "^0.4.0"
     ioredis "^4.19.4"
@@ -316,10 +316,10 @@
     koa-router "^10.0.0"
     lodash "^4.17.20"
 
-"@galenjs/sequelize-models@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.4.tgz#13d27516adb4634fe8a5c36853cf0f297b5d40cb"
-  integrity sha512-C06j0Ew0Ji+bNY6Kh0ob0bS+MYMHSH41VkY22824NwWaWnv9GUsr7YLFhoj9tIYqS7z6DTrz9pocYHtkzIhItw==
+"@galenjs/sequelize-models@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.5.tgz#94af2dbb1352efd3d9345159872cc81c9f5b158d"
+  integrity sha512-RtnorXbozKKMyn+SzoxOl2zBhHF5iIs38eJg3WIsyiMvNfsjZ1DMbfHD2dc8OWLlde5F1t4PQF0lTVq0GzXPyQ==
   dependencies:
     jsonschema "^1.4.0"
     lodash "^4.17.20"

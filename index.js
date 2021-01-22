@@ -103,19 +103,21 @@ const bootstrap = async () => {
     console.log(`✅  The server is running at http://localhost:${config.port}`)
   })
 
-  gracefulExit(server, () => new Promise((resolve) => {
-    if (app.context.models) {
-      app.context.models.quit()
-    }
+  gracefulExit(server, async () => {
     if (app.context.redis) {
-      app.context.redis.quit()
+      await app.context.redis.quit()
     }
-    if (pendingCount === 0) {
-      resolve()
-    } else {
-      app.on('pendingCount0', resolve)
+    if (app.context.models) {
+      await app.context.models.quit()
     }
-  }))
+    return new Promise((resolve) => {
+      if (pendingCount === 0) {
+        resolve()
+      } else {
+        app.on('pendingCount0', resolve)
+      }
+    })
+  })
 }
 
 bootstrap()
