@@ -19,6 +19,23 @@ const openApiInfo = {
 }
 
 module.exports = class Swagger {
+  async jsonDoc (ctx) {
+    const { isReload } = ctx.query
+    if (isReload) {
+      return buildSwaggerDocs(openApiInfo, {
+        schemas: ctx.schemas, remoteMethods: ctx.remoteMethods
+      })
+    }
+    let doc = docStore.get('openApi')
+    if (typeof doc === 'undefined') {
+      doc = await buildSwaggerDocs(openApiInfo, {
+        schemas: ctx.schemas, remoteMethods: ctx.remoteMethods
+      })
+      docStore.set('openApi', doc)
+    }
+    return doc
+  }
+
   async htmlDoc (ctx) {
     const { isReload } = ctx.query
     let originalUrl = '/v1/swagger.json'
@@ -105,22 +122,5 @@ module.exports = class Swagger {
       </script>
       </body>
       </html>`
-  }
-
-  async jsonDoc (ctx) {
-    const { isReload } = ctx.query
-    if (isReload) {
-      return buildSwaggerDocs(openApiInfo, {
-        schemas: ctx.schemas, remoteMethods: ctx.remoteMethods
-      })
-    }
-    let doc = docStore.get('openApi')
-    if (typeof doc === 'undefined') {
-      doc = await buildSwaggerDocs(openApiInfo, {
-        schemas: ctx.schemas, remoteMethods: ctx.remoteMethods
-      })
-      docStore.set('openApi', doc)
-    }
-    return doc
   }
 }
