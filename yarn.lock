@@ -316,10 +316,10 @@
     koa-router "^10.0.0"
     lodash "^4.17.20"
 
-"@galenjs/sequelize-models@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.0.tgz#b148a97d52a0517ff5f1abd87929bd318701f9c8"
-  integrity sha512-AENuB2TEmBBScc1iGkmySNx1fX/0GqKiHr1kF55S1tjwr9O7v/gE+Perjaxtccrk1xj2YNNTBhT8vA3jTjLrkA==
+"@galenjs/sequelize-models@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.4.tgz#13d27516adb4634fe8a5c36853cf0f297b5d40cb"
+  integrity sha512-C06j0Ew0Ji+bNY6Kh0ob0bS+MYMHSH41VkY22824NwWaWnv9GUsr7YLFhoj9tIYqS7z6DTrz9pocYHtkzIhItw==
   dependencies:
     jsonschema "^1.4.0"
     lodash "^4.17.20"

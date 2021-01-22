@@ -19,6 +19,26 @@ const config = require('./config')
 const app = new Koa()
 let pendingCount = 0
 
+const exitTimeout = 60 * 1000
+
+const gracefulExit = async (server, cleanUp, logger = console) => {
+  const close = () => {
+    logger.info('on SIGTERM wait requests')
+    server.close(async () => {
+      logger.info('wait cleanUp')
+      await cleanUp()
+      logger.info('done cleanUp')
+      process.exit(0)
+    })
+    setTimeout(() => {
+      logger.error('force exit')
+      process.exit(0)
+    }, exitTimeout)
+  }
+  process.on('SIGINT', close)
+  process.on('SIGTERM', close)
+}
+
 const bootstrap = async () => {
   const { remoteMethods, modelSchemas, schemas } = await loadModels({
     workspace: process.cwd(),
@@ -78,10 +98,24 @@ const bootstrap = async () => {
   app.use(router.routes())
   app.use(router.allowedMethods())
 
-  app.listen(config.port, () => {
+  const server = app.listen(config.port, () => {
     // eslint-disable-next-line no-console
     console.log(`✅  The server is running at http://localhost:${config.port}`)
   })
+
+  gracefulExit(server, () => new Promise((resolve) => {
+    if (app.context.models) {
+      app.context.models.quit()
+    }
+    if (app.context.redis) {
+      app.context.redis.quit()
+    }
+    if (pendingCount === 0) {
+      resolve()
+    } else {
+      app.on('pendingCount0', resolve)
+    }
+  }))
 }
 
 bootstrap()
