@@ -3,7 +3,7 @@ tags:
 
 dialect: 'influx'
 
-properties:
+model:
   path:
     type: string
     required: true
