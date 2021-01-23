@@ -260,10 +260,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@galenjs/base@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/@galenjs/base/-/base-0.4.0.tgz#9f33ada3f8862e482e26d7a4dbbe64fafb6fd31e"
-  integrity sha512-FvrEtNNv82Wl8eW7PLKSBZNn/3hD61mCEPu6oJkgx8sbgQkFUWAIgB9EmxnDCHXRyUgKbK421GN2HACHsfHZSg==
+"@galenjs/base@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.npmjs.org/@galenjs/base/-/base-0.4.6.tgz#23045220973ad0619461c2a3508e7392d3ef0594"
+  integrity sha512-P5R0Yz/s1YDdcY99lVrLtSoTRdz9zo37BXJPekyfPcDyh6lYanKzfOymrzOtDB4tRGwbe2XAJTA8SPoWsXFV7Q==
   dependencies:
     js-yaml "^3.14.0"
     jsonschema "^1.4.0"
@@ -316,10 +316,10 @@
     koa-router "^10.0.0"
     lodash "^4.17.20"
 
-"@galenjs/sequelize-models@^0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.5.tgz#94af2dbb1352efd3d9345159872cc81c9f5b158d"
-  integrity sha512-RtnorXbozKKMyn+SzoxOl2zBhHF5iIs38eJg3WIsyiMvNfsjZ1DMbfHD2dc8OWLlde5F1t4PQF0lTVq0GzXPyQ==
+"@galenjs/sequelize-models@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.npmjs.org/@galenjs/sequelize-models/-/sequelize-models-0.4.6.tgz#3ddd225734266798c60c3d882bcb393a3f34727a"
+  integrity sha512-DTrSPxbc6w3atkVif10DDkWt1vLrRFFCeIp+GzXdkeRo7ZNa7GcQhxvrenzJ6XX3zKKBbVTXcZZqXS6ppgIrCg==
   dependencies:
     jsonschema "^1.4.0"
     lodash "^4.17.20"
@@ -333,10 +333,10 @@
     lodash "^4.17.20"
     sequelize "^6.3.5"
 
-"@galenjs/swagger@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/@galenjs/swagger/-/swagger-0.4.0.tgz#a74d4c67b4299e4e510ddf14f2decc8021b576bf"
-  integrity sha512-mmam3fc1t/NuIf+F6GIuOO9Xc2Abv+mS9+L/zjYaC2K3xy1yNiv/KwfCvpyob7SwYw/To4wWr6mu3ifs8la7tg==
+"@galenjs/swagger@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.npmjs.org/@galenjs/swagger/-/swagger-0.4.7.tgz#ed52d0342af0ce78ab705d5b825817441d7866c8"
+  integrity sha512-8GxhPf85dwLMHtOuB9uXhCNe/N0MO3nzTDCKIMUXl6fypoFjlloL2LDYwttctQVSDi8zB+TvW1OiOFof3vjsCw==
   dependencies:
     lodash "^4.17.20"
 
