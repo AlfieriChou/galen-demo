@@ -10,7 +10,7 @@ const loadModels = require('@galenjs/base')
 const loadSequelizeModels = require('@galenjs/sequelize-models')
 const createInfluxClient = require('@galenjs/influx')
 const createRedisClient = require('@galenjs/redis')
-const buildRouter = require('@galenjs/router')
+const buildRouter = require('@galenjs/koa-router')
 const classLoader = require('@galenjs/class-loader')
 
 const config = require('./config')
