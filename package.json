@@ -25,7 +25,7 @@
     "@galenjs/redis": "^0.5.0",
     "@galenjs/sequelize-models": "^0.5.0",
     "@galenjs/swagger": "^0.5.0",
-    "@galenjs/typeorm-models": "^0.5.1",
+    "@galenjs/typeorm-models": "^0.5.3",
     "expire-store": "^1.0.2",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
