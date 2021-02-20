@@ -27,5 +27,16 @@ module.exports = {
         keyPrefix: 'main'
       }
     }
+  },
+  typeorm: {
+    default: {
+      host: '127.0.0.1',
+      username: 'root',
+      password: 'alfieri',
+      database: 'typeorm'
+    },
+    clients: {
+      main: {}
+    }
   }
 }

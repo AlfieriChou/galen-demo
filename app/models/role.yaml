@@ -1,16 +1,16 @@
 properties:
   id:
     type: integer
-    autoIncrement: true
-    primaryKey: true
+    primary: true
+    generated: true
   code:
     type: string
     length: 32
-    description: '编码'
+    comment: '编码'
   name:
     type: string
     length: 32
-    description: '名称'
+    comment: '名称'
   createdAt:
     type: date
     allowNull: false

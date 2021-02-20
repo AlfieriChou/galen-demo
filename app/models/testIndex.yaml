@@ -1,8 +1,8 @@
 properties:
   id:
     type: integer
-    autoIncrement: true
-    primaryKey: true
+    generated: true
+    primary: true
   testFieldOne:
     type: string
     length: 11
