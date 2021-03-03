@@ -340,10 +340,10 @@
   dependencies:
     lodash "^4.17.20"
 
-"@galenjs/typeorm-models@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.npmjs.org/@galenjs/typeorm-models/-/typeorm-models-0.5.3.tgz#e1bf6a384fd80f500eaff14139dc1a60a38c195d"
-  integrity sha512-yzM7qNKZ9y0LrrvB7S3mOg2Qa4dpsH0baPEvMXibTj5Wyd02wb2IEnCSU78K52hMyVNXm7rHC4g+3eHf5t86yQ==
+"@galenjs/typeorm-models@^0.5.4":
+  version "0.5.4"
+  resolved "https://registry.npmjs.org/@galenjs/typeorm-models/-/typeorm-models-0.5.4.tgz#1e6b9aff0bfc4e1983ad3bcce08feb7b9fc57e72"
+  integrity sha512-g7TjeoqsEH+ulV0Tds5400h4bEk8vxcdQ+Zx8LMJ9kvTOlNmtjZ+KeAYSG3RhTl7K//7pqN3yoOq5PnCzt6JQg==
   dependencies:
     "@galenjs/func" "^0.5.0"
     jsonschema "^1.4.0"

@@ -16,13 +16,13 @@ properties:
     length: 32
     comment: '昵称'
   createdAt:
-    type: date
+    type: bigint
     allowNull: false
   updatedAt:
-    type: date
+    type: bigint
     allowNull: false
   deletedAt:
-    type: date
+    type: bigint
 relations:
   roles:
     type: 'belongsToMany'

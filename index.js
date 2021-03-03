@@ -9,8 +9,12 @@ const bootstrap = async () => {
     modelPath: 'app/models'
   })
   console.log('---schemas-->', modelSchemas)
-  const models = await loadModels(modelSchemas, config.typeorm)
-  console.log('------>', JSON.stringify(models, null, 2))
+  const { models, connections } = await loadModels(modelSchemas, config.typeorm)
+  const connection = connections.main
+  const data = await connection.getRepository(models.User).find({
+    nick_name: 'test'
+  })
+  console.log('------>', JSON.stringify(data, null, 2))
 }
 
 bootstrap()
