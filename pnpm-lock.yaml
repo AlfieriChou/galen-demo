@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
-  '@galenjs/base': ^0.5.0
+  '@galenjs/base': ^0.5.12
   '@galenjs/class-loader': ^0.5.0
   '@galenjs/influx': ^0.5.0
   '@galenjs/koa-router': ^0.5.11
@@ -25,7 +25,7 @@ specifiers:
   standard-version: ^9.0.0
 
 dependencies:
-  '@galenjs/base': 0.5.0
+  '@galenjs/base': 0.5.12
   '@galenjs/class-loader': 0.5.0
   '@galenjs/influx': 0.5.0
   '@galenjs/koa-router': 0.5.11_mysql2@2.2.5
@@ -236,9 +236,10 @@ packages:
       - supports-color
     dev: true
 
-  /@galenjs/base/0.5.0:
-    resolution: {integrity: sha512-B0fkEwIR9JAYWzLRZaq0B9faOUj54B0wjJrIMkCswQxQguHJOBEW16AVmFGF1eCBY8YyyFpAHugp7nabto8uVg==}
+  /@galenjs/base/0.5.12:
+    resolution: {integrity: sha512-BnsWjW862tnlmCgvJ7wt7XS4raTMC4P4MC0e08Hq9A4RuVDW6bbHuhCOboUMLXuJ+yBVWdzZo8plyIvqBWh47Q==}
     dependencies:
+      '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
       js-yaml: 3.14.1
       jsonschema: 1.4.0
       lodash: 4.17.21

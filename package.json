@@ -18,7 +18,7 @@
     }
   },
   "dependencies": {
-    "@galenjs/base": "^0.5.0",
+    "@galenjs/base": "^0.5.12",
     "@galenjs/class-loader": "^0.5.0",
     "@galenjs/influx": "^0.5.0",
     "@galenjs/koa-router": "^0.5.11",
