@@ -8,7 +8,7 @@ specifiers:
   '@galenjs/influx': ^0.5.0
   '@galenjs/koa-router': ^0.5.11
   '@galenjs/redis': ^0.5.11
-  '@galenjs/sequelize-models': ^0.5.7
+  '@galenjs/sequelize-models': ^0.5.13
   '@galenjs/swagger': ^0.5.0
   eslint: ^7.14.0
   eslint-config-airbnb-standard: ^3.1.0
@@ -30,7 +30,7 @@ dependencies:
   '@galenjs/influx': 0.5.0
   '@galenjs/koa-router': 0.5.11_mysql2@2.2.5
   '@galenjs/redis': 0.5.11
-  '@galenjs/sequelize-models': 0.5.7_mysql2@2.2.5
+  '@galenjs/sequelize-models': 0.5.13_mysql2@2.2.5
   '@galenjs/swagger': 0.5.0
   expire-store: 1.0.2
   koa: 2.13.1
@@ -312,11 +312,12 @@ packages:
       - supports-color
     dev: false
 
-  /@galenjs/sequelize-models/0.5.7_mysql2@2.2.5:
-    resolution: {integrity: sha512-nUGCI2ILti4CCcYXE1+D46LLI82kLkn2h5AXeByvqdZA5TcMGR7IYt7w4PaY8QR/uEaLvuISUkQSd2cTDZEyTw==}
+  /@galenjs/sequelize-models/0.5.13_mysql2@2.2.5:
+    resolution: {integrity: sha512-hxXFZ7T5D5/Ec4rT/HhtIa7TbIV0dNOc482EwXvFTNJlFLSP05UO/KoD1M5ouLeaAnDFpSVAFFHTzCqNQrtvwA==}
     peerDependencies:
       mysql2: ^2.2.5
     dependencies:
+      '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
       jsonschema: 1.4.0
       lodash: 4.17.21
       mysql2: 2.2.5
