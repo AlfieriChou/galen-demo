@@ -5,6 +5,8 @@ specifiers:
   '@commitlint/config-conventional': ^11.0.0
   '@galenjs/base': ^0.5.12
   '@galenjs/class-loader': ^0.5.0
+  '@galenjs/factories': ^0.5.16
+  '@galenjs/framework': ^0.5.16
   '@galenjs/influx': ^0.5.0
   '@galenjs/koa-router': ^0.5.11
   '@galenjs/redis': ^0.5.11
@@ -28,6 +30,8 @@ specifiers:
 dependencies:
   '@galenjs/base': 0.5.12
   '@galenjs/class-loader': 0.5.0
+  '@galenjs/factories': 0.5.16
+  '@galenjs/framework': 0.5.16_448c9c7f65a7795db533d1081218b64e
   '@galenjs/influx': 0.5.0
   '@galenjs/koa-router': 0.5.11_mysql2@2.2.5
   '@galenjs/redis': 0.5.11
@@ -312,6 +316,16 @@ packages:
       read-dir-filenames: 1.0.6
     dev: false
 
+  /@galenjs/base/0.5.16:
+    resolution: {integrity: sha512-6rMZnpgnRdoYbEfs/LOJ52N6hkQu1xD3xOdSjduxs3OjZipzK2qkbzsb/m7CAwvPdrW7iuRRZBF27fAxIjz9YA==}
+    dependencies:
+      '@galenjs/factories': 0.5.16_jsonschema@1.4.0+lodash@4.17.21
+      js-yaml: 3.14.1
+      jsonschema: 1.4.0
+      lodash: 4.17.21
+      read-dir-filenames: 1.0.6
+    dev: false
+
   /@galenjs/class-loader/0.5.0:
     resolution: {integrity: sha512-uOqPGPwWtuyTAPU0P1I58ueffuQRj2jib9uBswjtzE+E7/5wTmPoaloqY1ddsJY93CRoYsLE4NSSGKNSMfc2rg==}
     dependencies:
@@ -338,6 +352,48 @@ packages:
       lodash: 4.17.21
     dev: false
 
+  /@galenjs/factories/0.5.16:
+    resolution: {integrity: sha512-RyTOKeC0FwjO3YaXlm/nJggx8C3DnW/2ur+NW5/LnZjVH5cxkWCbDKLbNHJ/MuGDsiZqEEdoA2GPNu/TIIZmtQ==}
+    peerDependencies:
+      jsonschema: ^1.4.0
+      lodash: ^4.17.20
+    dev: false
+
+  /@galenjs/factories/0.5.16_jsonschema@1.4.0+lodash@4.17.21:
+    resolution: {integrity: sha512-RyTOKeC0FwjO3YaXlm/nJggx8C3DnW/2ur+NW5/LnZjVH5cxkWCbDKLbNHJ/MuGDsiZqEEdoA2GPNu/TIIZmtQ==}
+    peerDependencies:
+      jsonschema: ^1.4.0
+      lodash: ^4.17.20
+    dependencies:
+      jsonschema: 1.4.0
+      lodash: 4.17.21
+    dev: false
+
+  /@galenjs/framework/0.5.16_448c9c7f65a7795db533d1081218b64e:
+    resolution: {integrity: sha512-sYG3sSEgUX+zcF4YQ7qtcJuAauuxoisjMpR/QOuNIZ8pRsEAPnv9nGgIYQCCQM4EyxBMo7JGyfa5KsC9orRAVA==}
+    peerDependencies:
+      '@galenjs/factories': ^0.5.10
+      '@galenjs/influx': ^0.5.0
+      '@galenjs/redis': ^0.5.14
+      '@galenjs/sequelize-models': ^0.5.14
+    dependencies:
+      '@galenjs/base': 0.5.16
+      '@galenjs/factories': 0.5.16
+      '@galenjs/influx': 0.5.0
+      '@galenjs/koa-router': 0.5.16_mysql2@2.2.5
+      '@galenjs/redis': 0.5.11
+      '@galenjs/sequelize-models': 0.5.13_mysql2@2.2.5
+      koa: 2.13.1
+    transitivePeerDependencies:
+      - mariadb
+      - mysql2
+      - pg
+      - pg-hstore
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
+
   /@galenjs/influx-query-filter/0.5.0:
     resolution: {integrity: sha512-u4quWTudJBq7OE61Wt3m8y4x1tRbjvbqXdj5I0u78W5dIyS+cYN+mU6iRN6aQr7F2HL0TBpoYuZcB+RJcfdYDQ==}
     dev: false
@@ -352,6 +408,25 @@ packages:
     resolution: {integrity: sha512-9jj9aZWQL9OZU6t3L+Mg6A9EkDoUc32J7+BPEOlvhB9i69Wle9pi6tjROzqXxo7OCl87eFXiR4TYSQ3vcDxx6g==}
     dependencies:
       '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
+      '@galenjs/influx-query-filter': 0.5.0
+      '@galenjs/sequelize-query-filter': 0.5.0_mysql2@2.2.5
+      jsonschema: 1.4.0
+      koa-router: 10.0.0
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - mariadb
+      - mysql2
+      - pg
+      - pg-hstore
+      - sqlite3
+      - supports-color
+      - tedious
+    dev: false
+
+  /@galenjs/koa-router/0.5.16_mysql2@2.2.5:
+    resolution: {integrity: sha512-SiL8P3EGPGroR4qBZiatZRRf43ZSEClRtqa6M8LiMfbZz+BOcXohzccuLuyd6CH+5CV52eQchii2WzNJM2WFFQ==}
+    dependencies:
+      '@galenjs/factories': 0.5.16_jsonschema@1.4.0+lodash@4.17.21
       '@galenjs/influx-query-filter': 0.5.0
       '@galenjs/sequelize-query-filter': 0.5.0_mysql2@2.2.5
       jsonschema: 1.4.0

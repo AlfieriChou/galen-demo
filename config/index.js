@@ -1,6 +1,8 @@
 module.exports = {
   port: 4000,
-  mysql: {
+  workspace: process.cwd(),
+  modelPath: 'app/models',
+  sequelize: {
     default: {
       host: '127.0.0.1',
       user: 'root',
