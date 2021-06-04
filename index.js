@@ -14,29 +14,10 @@ const buildRouter = require('@galenjs/koa-router')
 const classLoader = require('@galenjs/class-loader')
 
 const config = require('./config')
+const gracefulExit = require('./lib/gracefulExit')
 
 const app = new Koa()
 let pendingCount = 0
-
-const exitTimeout = 60 * 1000
-
-const gracefulExit = async (server, cleanUp, logger = console) => {
-  const close = () => {
-    logger.info('on SIGTERM wait requests')
-    server.close(async () => {
-      logger.info('wait cleanUp')
-      await cleanUp()
-      logger.info('done cleanUp')
-      process.exit(0)
-    })
-    setTimeout(() => {
-      logger.error('force exit')
-      process.exit(0)
-    }, exitTimeout)
-  }
-  process.on('SIGINT', close)
-  process.on('SIGTERM', close)
-}
 
 const bootstrap = async () => {
   const { remoteMethods, modelSchemas, schemas } = await loadModels({
@@ -103,19 +84,23 @@ const bootstrap = async () => {
   })
 
   gracefulExit(server, async () => {
-    if (app.context.redis) {
-      await app.context.redis.quit()
-    }
-    if (app.context.models) {
-      await app.context.models.quit()
-    }
-    return new Promise((resolve) => {
-      if (pendingCount === 0) {
-        resolve()
-      } else {
-        app.on('pendingCount0', resolve)
+    if (pendingCount === 0) {
+      if (app.context.redis) {
+        await app.context.redis.quit()
       }
-    })
+      if (app.context.models) {
+        await app.context.models.quit()
+      }
+    } else {
+      app.on('pendingCount0', async () => {
+        if (app.context.redis) {
+          await app.context.redis.quit()
+        }
+        if (app.context.models) {
+          await app.context.models.quit()
+        }
+      })
+    }
   })
 }
 
