@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@galenjs/class-loader': ^0.6.0
-  '@galenjs/framework': ^0.6.1
+  '@galenjs/framework': ^0.6.3
   '@galenjs/influx': ^0.6.0
   '@galenjs/redis': ^0.6.0
   '@galenjs/sequelize-models': ^0.6.0
@@ -26,7 +26,7 @@ specifiers:
 
 dependencies:
   '@galenjs/class-loader': 0.6.0
-  '@galenjs/framework': 0.6.1_c5b266855fc198ffeae78384705644e6
+  '@galenjs/framework': 0.6.3_c5b266855fc198ffeae78384705644e6
   '@galenjs/influx': 0.6.0
   '@galenjs/redis': 0.6.0
   '@galenjs/sequelize-models': 0.6.0_mysql2@2.2.5
@@ -336,8 +336,8 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@galenjs/framework/0.6.1_c5b266855fc198ffeae78384705644e6:
-    resolution: {integrity: sha512-NHci6s4ANvIh2DgCMirqzgXlcawyuNi9YbUBlwaqL4St/amjAaOGz4tYk9HPOyL3aFHRLoJ0p7vaOf0TeMeuDg==}
+  /@galenjs/framework/0.6.3_c5b266855fc198ffeae78384705644e6:
+    resolution: {integrity: sha512-JcQvpFlpbFzcGCzG6Fz8zYBVM0Vvklcy4CPCBMSJqUDZ+BfzQlaJEcSy+JE9vq1FCoGq1ffB6VrJu9P5mjcZOA==}
     peerDependencies:
       '@galenjs/class-loader': ^0.6.0
       '@galenjs/factories': ^0.6.0
