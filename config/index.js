@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   port: 4000,
   workspace: process.cwd(),
@@ -29,5 +31,7 @@ module.exports = {
         keyPrefix: 'main'
       }
     }
-  }
+  },
+  controllerPath: path.join(process.cwd(), '/app/controller'),
+  servicePath: path.join(process.cwd(), '/app/service')
 }

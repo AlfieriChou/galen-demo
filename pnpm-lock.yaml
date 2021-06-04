@@ -3,14 +3,11 @@ lockfileVersion: 5.3
 specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
-  '@galenjs/base': ^0.5.12
-  '@galenjs/class-loader': ^0.5.0
-  '@galenjs/factories': ^0.5.16
-  '@galenjs/framework': ^0.5.16
-  '@galenjs/influx': ^0.5.0
-  '@galenjs/koa-router': ^0.5.11
-  '@galenjs/redis': ^0.5.11
-  '@galenjs/sequelize-models': ^0.5.13
+  '@galenjs/class-loader': ^0.6.0
+  '@galenjs/framework': ^0.6.1
+  '@galenjs/influx': ^0.6.0
+  '@galenjs/redis': ^0.6.0
+  '@galenjs/sequelize-models': ^0.6.0
   '@galenjs/swagger': ^0.5.0
   eslint: ^7.14.0
   eslint-config-standard-airbnb-base: ^1.0.3
@@ -28,14 +25,11 @@ specifiers:
   standard-version: ^9.0.0
 
 dependencies:
-  '@galenjs/base': 0.5.12
-  '@galenjs/class-loader': 0.5.0
-  '@galenjs/factories': 0.5.16
-  '@galenjs/framework': 0.5.16_448c9c7f65a7795db533d1081218b64e
-  '@galenjs/influx': 0.5.0
-  '@galenjs/koa-router': 0.5.11_mysql2@2.2.5
-  '@galenjs/redis': 0.5.11
-  '@galenjs/sequelize-models': 0.5.13_mysql2@2.2.5
+  '@galenjs/class-loader': 0.6.0
+  '@galenjs/framework': 0.6.1_c5b266855fc198ffeae78384705644e6
+  '@galenjs/influx': 0.6.0
+  '@galenjs/redis': 0.6.0
+  '@galenjs/sequelize-models': 0.6.0_mysql2@2.2.5
   '@galenjs/swagger': 0.5.0
   expire-store: 1.0.2
   koa: 2.13.1
@@ -306,35 +300,25 @@ packages:
       - supports-color
     dev: true
 
-  /@galenjs/base/0.5.12:
-    resolution: {integrity: sha512-BnsWjW862tnlmCgvJ7wt7XS4raTMC4P4MC0e08Hq9A4RuVDW6bbHuhCOboUMLXuJ+yBVWdzZo8plyIvqBWh47Q==}
+  /@galenjs/base/0.6.0:
+    resolution: {integrity: sha512-7JpGruAfFgw8yQAkPgYwS86b3aGvBVIcvVDAzvk8/rcHL6uzA2Rlbaw34fbHBbriG/y56SbZxbpZunmxzdbexg==}
     dependencies:
-      '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
+      '@galenjs/factories': 0.6.0_jsonschema@1.4.0+lodash@4.17.21
       js-yaml: 3.14.1
       jsonschema: 1.4.0
       lodash: 4.17.21
       read-dir-filenames: 1.0.6
     dev: false
 
-  /@galenjs/base/0.5.16:
-    resolution: {integrity: sha512-6rMZnpgnRdoYbEfs/LOJ52N6hkQu1xD3xOdSjduxs3OjZipzK2qkbzsb/m7CAwvPdrW7iuRRZBF27fAxIjz9YA==}
-    dependencies:
-      '@galenjs/factories': 0.5.16_jsonschema@1.4.0+lodash@4.17.21
-      js-yaml: 3.14.1
-      jsonschema: 1.4.0
-      lodash: 4.17.21
-      read-dir-filenames: 1.0.6
-    dev: false
-
-  /@galenjs/class-loader/0.5.0:
-    resolution: {integrity: sha512-uOqPGPwWtuyTAPU0P1I58ueffuQRj2jib9uBswjtzE+E7/5wTmPoaloqY1ddsJY93CRoYsLE4NSSGKNSMfc2rg==}
+  /@galenjs/class-loader/0.6.0:
+    resolution: {integrity: sha512-9wlUK3WygOWNOX+HEV8DXQCqJiISbiBVUW884d0NQqR5lEh544iQLTTTBXNrEsm9cs/DJFQTAdbFK3mSSE6TVQ==}
     dependencies:
       is-class: 0.0.9
       read-dir-filenames: 1.0.6
     dev: false
 
-  /@galenjs/factories/0.5.10_jsonschema@1.4.0:
-    resolution: {integrity: sha512-0nucjzXThFey8TLvQSvMN5PPmwwjnWerM7nCffM6kKlZwiNtbjwOQc8P2w2R0UAgL6M+f6TeikceHP4WtMw+RA==}
+  /@galenjs/factories/0.6.0_jsonschema@1.4.0:
+    resolution: {integrity: sha512-IaNTpd7AMXMf7ShBiUWRwoQZQxSbbctngsQ+BA26jgWeOydAkC6mfXgygwun4BWYmSC7q3Tr5vqLqwPcLqYazg==}
     peerDependencies:
       jsonschema: ^1.4.0
       lodash: ^4.17.20
@@ -342,25 +326,8 @@ packages:
       jsonschema: 1.4.0
     dev: false
 
-  /@galenjs/factories/0.5.10_jsonschema@1.4.0+lodash@4.17.21:
-    resolution: {integrity: sha512-0nucjzXThFey8TLvQSvMN5PPmwwjnWerM7nCffM6kKlZwiNtbjwOQc8P2w2R0UAgL6M+f6TeikceHP4WtMw+RA==}
-    peerDependencies:
-      jsonschema: ^1.4.0
-      lodash: ^4.17.20
-    dependencies:
-      jsonschema: 1.4.0
-      lodash: 4.17.21
-    dev: false
-
-  /@galenjs/factories/0.5.16:
-    resolution: {integrity: sha512-RyTOKeC0FwjO3YaXlm/nJggx8C3DnW/2ur+NW5/LnZjVH5cxkWCbDKLbNHJ/MuGDsiZqEEdoA2GPNu/TIIZmtQ==}
-    peerDependencies:
-      jsonschema: ^1.4.0
-      lodash: ^4.17.20
-    dev: false
-
-  /@galenjs/factories/0.5.16_jsonschema@1.4.0+lodash@4.17.21:
-    resolution: {integrity: sha512-RyTOKeC0FwjO3YaXlm/nJggx8C3DnW/2ur+NW5/LnZjVH5cxkWCbDKLbNHJ/MuGDsiZqEEdoA2GPNu/TIIZmtQ==}
+  /@galenjs/factories/0.6.0_jsonschema@1.4.0+lodash@4.17.21:
+    resolution: {integrity: sha512-IaNTpd7AMXMf7ShBiUWRwoQZQxSbbctngsQ+BA26jgWeOydAkC6mfXgygwun4BWYmSC7q3Tr5vqLqwPcLqYazg==}
     peerDependencies:
       jsonschema: ^1.4.0
       lodash: ^4.17.20
@@ -369,20 +336,21 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@galenjs/framework/0.5.16_448c9c7f65a7795db533d1081218b64e:
-    resolution: {integrity: sha512-sYG3sSEgUX+zcF4YQ7qtcJuAauuxoisjMpR/QOuNIZ8pRsEAPnv9nGgIYQCCQM4EyxBMo7JGyfa5KsC9orRAVA==}
+  /@galenjs/framework/0.6.1_c5b266855fc198ffeae78384705644e6:
+    resolution: {integrity: sha512-NHci6s4ANvIh2DgCMirqzgXlcawyuNi9YbUBlwaqL4St/amjAaOGz4tYk9HPOyL3aFHRLoJ0p7vaOf0TeMeuDg==}
     peerDependencies:
-      '@galenjs/factories': ^0.5.10
-      '@galenjs/influx': ^0.5.0
-      '@galenjs/redis': ^0.5.14
-      '@galenjs/sequelize-models': ^0.5.14
+      '@galenjs/class-loader': ^0.6.0
+      '@galenjs/factories': ^0.6.0
+      '@galenjs/influx': ^0.6.0
+      '@galenjs/redis': ^0.6.0
+      '@galenjs/sequelize-models': ^0.6.0
     dependencies:
-      '@galenjs/base': 0.5.16
-      '@galenjs/factories': 0.5.16
-      '@galenjs/influx': 0.5.0
-      '@galenjs/koa-router': 0.5.16_mysql2@2.2.5
-      '@galenjs/redis': 0.5.11
-      '@galenjs/sequelize-models': 0.5.13_mysql2@2.2.5
+      '@galenjs/base': 0.6.0
+      '@galenjs/class-loader': 0.6.0
+      '@galenjs/influx': 0.6.0
+      '@galenjs/koa-router': 0.6.0_mysql2@2.2.5
+      '@galenjs/redis': 0.6.0
+      '@galenjs/sequelize-models': 0.6.0_mysql2@2.2.5
       koa: 2.13.1
     transitivePeerDependencies:
       - mariadb
@@ -394,22 +362,22 @@ packages:
       - tedious
     dev: false
 
-  /@galenjs/influx-query-filter/0.5.0:
-    resolution: {integrity: sha512-u4quWTudJBq7OE61Wt3m8y4x1tRbjvbqXdj5I0u78W5dIyS+cYN+mU6iRN6aQr7F2HL0TBpoYuZcB+RJcfdYDQ==}
+  /@galenjs/influx-query-filter/0.6.0:
+    resolution: {integrity: sha512-rYcggBFhJu0MMn/HNUlo/x27EWWzvLqU7EZMo7Vwu5YN5t86sQWOopsB+Z+zLvTLPI3qPj+LS59UJEV4cdTioA==}
     dev: false
 
-  /@galenjs/influx/0.5.0:
-    resolution: {integrity: sha512-ow1BU1ls2wHDLrPLKKOS8Vp1g7CgpvbY/cv/FXouHLwRTVuTaqtNYJRiEwvplaRZnOh2g3be8NOPtpZ/df+1lg==}
+  /@galenjs/influx/0.6.0:
+    resolution: {integrity: sha512-uN3XMlAU46ASVvB9+e6QNk32eL9HLWxJlc6G1PwE5WJK5UPAzSBxBeOhGGEtX+uNQS2GC2DLN8rvRD7HizXVyQ==}
     dependencies:
-      influx: 5.9.0
+      influx: 5.9.2
     dev: false
 
-  /@galenjs/koa-router/0.5.11_mysql2@2.2.5:
-    resolution: {integrity: sha512-9jj9aZWQL9OZU6t3L+Mg6A9EkDoUc32J7+BPEOlvhB9i69Wle9pi6tjROzqXxo7OCl87eFXiR4TYSQ3vcDxx6g==}
+  /@galenjs/koa-router/0.6.0_mysql2@2.2.5:
+    resolution: {integrity: sha512-5yRVXwitf2rZ4k2PtGIR7t3S8bFjTqcaCRcIyAcanQTmXVFCXmOc97bnaiLYVoiwdMWyPg3e9E7XbW1f3ni3Mg==}
     dependencies:
-      '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
-      '@galenjs/influx-query-filter': 0.5.0
-      '@galenjs/sequelize-query-filter': 0.5.0_mysql2@2.2.5
+      '@galenjs/factories': 0.6.0_jsonschema@1.4.0+lodash@4.17.21
+      '@galenjs/influx-query-filter': 0.6.0
+      '@galenjs/sequelize-query-filter': 0.6.0_mysql2@2.2.5
       jsonschema: 1.4.0
       koa-router: 10.0.0
       lodash: 4.17.21
@@ -423,42 +391,23 @@ packages:
       - tedious
     dev: false
 
-  /@galenjs/koa-router/0.5.16_mysql2@2.2.5:
-    resolution: {integrity: sha512-SiL8P3EGPGroR4qBZiatZRRf43ZSEClRtqa6M8LiMfbZz+BOcXohzccuLuyd6CH+5CV52eQchii2WzNJM2WFFQ==}
+  /@galenjs/redis/0.6.0:
+    resolution: {integrity: sha512-phzXAwxGIkl+44AsmYuxOsh2GtgcjyzBjKoWqdsfoqPYXpbNwnJ6SqfFRDksGDqhcauJalzyKCZZzOcdn6s+jg==}
     dependencies:
-      '@galenjs/factories': 0.5.16_jsonschema@1.4.0+lodash@4.17.21
-      '@galenjs/influx-query-filter': 0.5.0
-      '@galenjs/sequelize-query-filter': 0.5.0_mysql2@2.2.5
-      jsonschema: 1.4.0
-      koa-router: 10.0.0
-      lodash: 4.17.21
-    transitivePeerDependencies:
-      - mariadb
-      - mysql2
-      - pg
-      - pg-hstore
-      - sqlite3
-      - supports-color
-      - tedious
-    dev: false
-
-  /@galenjs/redis/0.5.11:
-    resolution: {integrity: sha512-zEtxXgTMEb0mi+7sZS1b9meUm9jlcHr/RZaqqozUsKcp1U7NvE1sIkGrg04KxHP9SWd+/vg2zZnRTffUDEIUBA==}
-    dependencies:
-      '@galenjs/factories': 0.5.10_jsonschema@1.4.0
-      ioredis: 4.27.2
+      '@galenjs/factories': 0.6.0_jsonschema@1.4.0
+      ioredis: 4.27.4
       jsonschema: 1.4.0
     transitivePeerDependencies:
       - lodash
       - supports-color
     dev: false
 
-  /@galenjs/sequelize-models/0.5.13_mysql2@2.2.5:
-    resolution: {integrity: sha512-hxXFZ7T5D5/Ec4rT/HhtIa7TbIV0dNOc482EwXvFTNJlFLSP05UO/KoD1M5ouLeaAnDFpSVAFFHTzCqNQrtvwA==}
+  /@galenjs/sequelize-models/0.6.0_mysql2@2.2.5:
+    resolution: {integrity: sha512-DOdLXli+z7TcCLLEMMus/PvQP3huvBGqLS2zalv5AktwuP/p3tvevpOwkpSRZGnG7jO7a6dkzs5wVftmWA7LWA==}
     peerDependencies:
       mysql2: ^2.2.5
     dependencies:
-      '@galenjs/factories': 0.5.10_jsonschema@1.4.0+lodash@4.17.21
+      '@galenjs/factories': 0.6.0_jsonschema@1.4.0+lodash@4.17.21
       jsonschema: 1.4.0
       lodash: 4.17.21
       mysql2: 2.2.5
@@ -472,8 +421,8 @@ packages:
       - tedious
     dev: false
 
-  /@galenjs/sequelize-query-filter/0.5.0_mysql2@2.2.5:
-    resolution: {integrity: sha512-mIXL8m65D5AW/eJe1TlaktZ0xBwc5NVuV3fLV/X7ebZ02MnqHuK5gOd3e3dYXTrA2o6u3uvLml0eW0TYVTE6bQ==}
+  /@galenjs/sequelize-query-filter/0.6.0_mysql2@2.2.5:
+    resolution: {integrity: sha512-mOQW+z+ENjEMnXsGnFB7lT2qu2CjOEfv7sFMxYPN1GXkPRXjRTvzA4QG3EhwRFhxwU0Fw2TBgTBUe5Q/eeDNkg==}
     dependencies:
       lodash: 4.17.21
       sequelize: 6.6.2_mysql2@2.2.5
@@ -518,6 +467,10 @@ packages:
   /@types/minimist/1.2.1:
     resolution: {integrity: sha512-fZQQafSREFyuZcdWFAExYjBiCL7AUCdgsk80iO0q4yihYYdcIiH28CcuPTGFgLOCC8RlW49GSQxdHwZP+I7CNg==}
     dev: true
+
+  /@types/node/15.12.0:
+    resolution: {integrity: sha512-+aHJvoCsVhO2ZCuT4o5JtcPrCPyDE3+1nvbDprYes+pPkEsbjH7AGUCNtjMOXS0fqH14t+B7yLzaqSz92FPWyw==}
+    dev: false
 
   /@types/node/15.3.0:
     resolution: {integrity: sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==}
@@ -2277,8 +2230,8 @@ packages:
       wrappy: 1.0.2
     dev: true
 
-  /influx/5.9.0:
-    resolution: {integrity: sha512-oAG5tpxzWep7cA+1ybEK0HIptuBGK+DwObeSmsIRr9VXBf4ggN/vqSUqlvgQpjEoeUNr2tphHZJWc9n33sle9A==}
+  /influx/5.9.2:
+    resolution: {integrity: sha512-N2YRIQiwCO60BzmzEzTxyWj/hDNsce2CLSmki8S1qbRwwuKecfvC6n0OwJrFV70lk5CpU/sLsOZFIy6PP01nOA==}
     dev: false
 
   /inherits/2.0.4:
@@ -2297,8 +2250,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ioredis/4.27.2:
-    resolution: {integrity: sha512-7OpYymIthonkC2Jne5uGWXswdhlua1S1rWGAERaotn0hGJWTSURvxdHA9G6wNbT/qKCloCja/FHsfKXW8lpTmg==}
+  /ioredis/4.27.4:
+    resolution: {integrity: sha512-1n91WZ+L1tHL4hEN9pT16s3f0+Dg82GfvyJGaD47BhEvQb63gIsmDkt/dmzDFBTYfwwlQn8TsT/QSPcjHiT3CQ==}
     engines: {node: '>=6'}
     dependencies:
       cluster-key-slot: 1.1.0
@@ -4464,7 +4417,7 @@ packages:
   /wkx/0.5.0:
     resolution: {integrity: sha512-Xng/d4Ichh8uN4l0FToV/258EjMGU9MGcA0HV2d9B/ZpZB3lqQm7nkOdZdm5GhKtLLhAE7PiVQwN4eN+2YJJUg==}
     dependencies:
-      '@types/node': 15.3.0
+      '@types/node': 15.12.0
     dev: false
 
   /word-wrap/1.2.3:
