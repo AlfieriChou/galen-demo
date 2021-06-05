@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@galenjs/class-loader": "^0.6.0",
-    "@galenjs/framework": "^0.6.3",
+    "@galenjs/framework": "^0.6.4",
     "@galenjs/influx": "^0.6.0",
     "@galenjs/redis": "^0.6.0",
     "@galenjs/sequelize-models": "^0.6.0",
