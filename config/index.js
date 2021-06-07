@@ -1,7 +1,6 @@
-const path = require('path')
-
 module.exports = {
   port: 4000,
+  plugins: ['doc'],
   workspace: process.cwd(),
   modelPath: 'app/models',
   sequelize: {
@@ -32,6 +31,6 @@ module.exports = {
       }
     }
   },
-  controllerPath: path.join(process.cwd(), '/app/controller'),
-  servicePath: path.join(process.cwd(), '/app/service')
+  controllerPath: 'app/controller',
+  servicePath: 'app/service'
 }
