@@ -1,6 +1,9 @@
 module.exports = {
   port: 4000,
-  plugins: ['doc'],
+  plugin: {
+    mainPath: 'plugins',
+    plugins: ['doc']
+  },
   workspace: process.cwd(),
   modelPath: 'app/models',
   sequelize: {
