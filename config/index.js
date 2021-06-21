@@ -35,5 +35,6 @@ module.exports = {
     }
   },
   controllerPath: 'app/controller',
-  servicePath: 'app/service'
+  servicePath: 'app/service',
+  middlewarePath: 'app/middleware'
 }
