@@ -30,6 +30,7 @@ const bootstrap = async () => {
     }])
   })
   framework.app.use(...[koaLogger(), koaBody({}), bodyParser()])
+  await framework.loadMiddleware()
   await framework.start()
 }
 

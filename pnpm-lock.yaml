@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': ^11.0.0
   '@commitlint/config-conventional': ^11.0.0
   '@galenjs/class-loader': ^0.6.0
-  '@galenjs/framework': ^0.6.9
+  '@galenjs/framework': ^0.6.11
   '@galenjs/influx': ^0.6.0
   '@galenjs/redis': ^0.6.0
   '@galenjs/sequelize-models': ^0.6.0
@@ -26,7 +26,7 @@ specifiers:
 
 dependencies:
   '@galenjs/class-loader': 0.6.0
-  '@galenjs/framework': 0.6.9_901a9e661a8855d20556c3011ff53b4c
+  '@galenjs/framework': 0.6.11_901a9e661a8855d20556c3011ff53b4c
   '@galenjs/influx': 0.6.0
   '@galenjs/redis': 0.6.0
   '@galenjs/sequelize-models': 0.6.0_mysql2@2.2.5
@@ -336,8 +336,8 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /@galenjs/framework/0.6.9_901a9e661a8855d20556c3011ff53b4c:
-    resolution: {integrity: sha512-UIYSdkZRM3Z3631bMUkyiKHXZX89LOwWChv5x00YyBcLWYzs/apb9JQF+gVjRdTbhljjbh15SeucdsWm/l2VfA==}
+  /@galenjs/framework/0.6.11_901a9e661a8855d20556c3011ff53b4c:
+    resolution: {integrity: sha512-mOepwpquwfWso/XSeS80ix3QprzLSOd4SmfuNcllrb/CBBs36exsfxIqMc3Z6oq32mIPNGAg6JDLL8HihSY6Wg==}
     peerDependencies:
       '@galenjs/factories': ^0.6.0
       '@galenjs/influx': ^0.6.0
@@ -351,6 +351,8 @@ packages:
       '@galenjs/redis': 0.6.0
       '@galenjs/sequelize-models': 0.6.0_mysql2@2.2.5
       koa: 2.13.1
+      koa-compose: 4.1.0
+      read-dir-filenames: 1.0.6
     transitivePeerDependencies:
       - mariadb
       - mysql2
