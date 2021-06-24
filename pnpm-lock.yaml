@@ -21,6 +21,7 @@ specifiers:
   koa: ^2.13.1
   koa-body: ^4.2.0
   koa-bodyparser: ^4.3.0
+  koa-compose: ^4.1.0
   koa-logger: ^3.2.1
   lint-staged: ^10.5.4
   lodash: ^4.17.21
@@ -42,6 +43,7 @@ dependencies:
   koa: 2.13.1
   koa-body: 4.2.0
   koa-bodyparser: 4.3.0
+  koa-compose: 4.1.0
   koa-logger: 3.2.1
   lodash: 4.17.21
   mysql2: 2.2.5

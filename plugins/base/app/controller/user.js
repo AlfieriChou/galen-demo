@@ -18,7 +18,7 @@ module.exports = class User {
     if (!user) {
       ctx.throw(400, 'user not registered')
     }
-    if (!ctx.service.common.verifyPassword(user.password, password)) {
+    if (!ctx.service.bcrypt.verifyPassword(user.password, password)) {
       ctx.throw(400, 'password error')
     }
     const token = ctx.service.jwt.createToken({ phone })
