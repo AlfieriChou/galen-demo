@@ -34,3 +34,54 @@ indexes:
     fields:
       - phone
       - nickName
+remoteMethods:
+  register:
+    path: '/register'
+    method: 'post'
+    tags:
+      - 'user'
+    summary: '用户注册'
+    requestBody:
+      body:
+        phone:
+          type: string
+          length: 11
+          description: '手机号'
+        password:
+          type: string
+          length: 32
+          description: '密码'
+      required:
+        - 'phone'
+        - 'password'
+    output:
+      200:
+        type: 'object'
+        model: 'User'
+  login:
+    path: '/login'
+    method: 'post'
+    tags:
+      - 'user'
+    summary: '用户登录'
+    requestBody:
+      body:
+        phone:
+          type: string
+          length: 11
+          description: '手机号'
+        password:
+          type: string
+          length: 32
+          description: '密码'
+      required:
+        - 'phone'
+        - 'password'
+    output:
+      200:
+        type: 'object'
+        result:
+          user:
+            type: 'object'
+          token:
+            type: 'string'
