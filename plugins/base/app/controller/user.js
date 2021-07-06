@@ -5,11 +5,10 @@ module.exports = class User {
     if (user) {
       ctx.throw(400, 'user is registered')
     }
-    const ret = await ctx.models.User.create({
+    return ctx.models.User.create({
       phone,
       password: await ctx.service.bcrypt.generateHash(password)
     })
-    return ret
   }
 
   async login (ctx) {
@@ -21,10 +20,10 @@ module.exports = class User {
     if (!ctx.service.bcrypt.verifyPassword(user.password, password)) {
       ctx.throw(400, 'password error')
     }
-    const token = ctx.service.jwt.createToken({ phone })
+    // set token to cookie and redirect to home page
     return {
       user,
-      token
+      token: ctx.service.jwt.createToken({ phone })
     }
   }
 }
